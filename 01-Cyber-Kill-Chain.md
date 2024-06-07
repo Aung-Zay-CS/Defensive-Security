@@ -4,7 +4,6 @@ It is based on military attack principles and consists of seven stages:
 
 ![THE-CYBER-KILL-CHAIN](https://github.com/AungZayMyo/Defensive-Security/assets/154745254/549a59a1-4aa8-4a85-8042-be52de28a5d0)
 
-
 - Reconnaissance: The attacker gathers information about the target, such as identifying potential vulnerabilities and the best methods of attack.
 - Weaponization: The attacker creates a deliverable payload (e.g., malware) to exploit the identified vulnerabilities.
 - Delivery: The attacker transmits the payload to the target (e.g., through email, websites, or other vectors).
