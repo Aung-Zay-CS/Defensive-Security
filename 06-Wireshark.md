@@ -1,6 +1,15 @@
+#  Traffic Monitoring
+Network traffic monitoring involves the process of capturing and analyzing data packets flowing through a computer network.
+Effective network traffic monitoring requires balancing between capturing sufficient data for analysis and managing the overhead of monitoring tools on network performance. It plays a critical role in maintaining network security, optimizing performance, and ensuring the reliability of network operations in organizations of all sizes.
+
 #  Wireshark
+Wireshark is a powerful network protocol analyzer that allows you to capture and analyze network traffic in real-time. 
+Wireshark can capture live packet data from a network interface or read packets from a previously saved capture file. 
+It supports a wide range of network protocols and can capture packets on Ethernet, Wi-Fi, Bluetooth, USB, and other network interfaces.
 
 ##  Packet Filtering
+Once captured, Wireshark provides detailed packet inspection capabilities. It allows you to view packet headers and payloads, dissect protocols, and analyze packet timing and sequence. Wireshark offers powerful filtering and search functionalities. You can apply display filters to focus on specific packets (e.g., by protocol, IP address, port number) and use search tools to find packets containing specific data or patterns.
+
 
 ###  Comparison Operators
 
