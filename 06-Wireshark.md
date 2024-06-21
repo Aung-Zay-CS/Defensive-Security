@@ -172,5 +172,5 @@ Hypertext Transfer Protocol (HTTP) is a cleartext-based, request-response and cl
 # Conclusion 
 
 In this module, Traffic Monitoring and investigating with wireshark pratical are leared. Do more Practice and Expert it!. <br>
-**6/19/2024** <br>
+**6/21/2024** <br>
 Contributed By - Jord@n
