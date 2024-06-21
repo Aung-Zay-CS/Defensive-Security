@@ -159,3 +159,9 @@ Hypertext Transfer Protocol (HTTP) is a cleartext-based, request-response and cl
 | http.request.uri contains "admin" | Points the requested resource from the server. |
 | http.request.full_uri contains "admin | Full *URI: Complete URI information. |
 | http.connection == "Keep-Alive" | Connection status. |
+
+# Conclusion 
+
+In this module, Traffic Monitoring and investigating with wireshark pratical are leared. Do more Practice and Expert it!. <br>
+**6/19/2024** <br>
+Contributed By - Jord@n
