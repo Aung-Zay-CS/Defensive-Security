@@ -1,5 +1,21 @@
 #  Snort
-Before diving into Snort and analysing traffic, let's have a brief overview of what an Intrusion Detection System (IDS) and Intrusion Prevention System (IPS) is.
+SNORT is an open-source, rule-based Network Intrusion Detection and Prevention System (NIDS/NIPS). It was developed and still maintained by Martin Roesch, open-source contributors, and the Cisco Talos team. 
+
+Capabilities of Snort;
+- Live traffic analysis
+- Attack and probe detection
+- Packet logging
+- Protocol analysis
+- Real-time alerting
+- Modules & plugins
+- Pre-processors
+- Cross-platform support! (Linux & Windows)
+
+Snort has three main use models;
+
+- Sniffer Mode - Read IP packets and prompt them in the console application.
+- Packet Logger Mode - Log all IP packets (inbound and outbound) that visit the network.
+- NIDS (Network Intrusion Detection System)  and NIPS (Network Intrusion Prevention System) Modes - Log/drop the packets that are deemed as malicious according to the user-defined rules.
 
 ###  Intrusion Detection System (IDS)
 
@@ -39,3 +55,17 @@ HIPS working mechanism is similar to HIDS. The difference between them is that w
 ###  Detection/Prevention Techniques
 
 There are three main detection and prevention techniques used in IDS and IPS solutions;
+| Technique | Approach |
+|---|---|
+| Signature-Based | This technique relies on rules that identify the specific patterns of the known malicious behaviour. This model helps detect known threats. |
+| Behaviour-Based | This technique identifies new threats with new patterns that pass through signatures. The model compares the known/normal with unknown/abnormal behaviours. |
+| Policy-Based | This technique compares detected activities with system configuration and security policies. This model helps detect policy violations. |
+
+
+##  Snort Usecases
+
+The following command will show you the instance version.
+- `snort -v`
+
+Here "-T" is used for testing configuration, and "-c" is identifying the configuration file.
+- `sudo snort -c /etc/snort/snort.conf -T`
