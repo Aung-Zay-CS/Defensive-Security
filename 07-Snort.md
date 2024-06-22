@@ -153,3 +153,9 @@ Snort instance in full alert mode
 
 Snort instance in none alert mode
 - `sudo snort -c /etc/snort/snort.conf -A none`
+
+## Conclusion 
+
+In this module, Intrusion Detection/Prevention System investigating with snort pratical are leared. Do more Practice and Expert it!. <br>
+**6/22/2024** <br>
+Contributed By - Jord@n
