@@ -169,6 +169,17 @@ Hypertext Transfer Protocol (HTTP) is a cleartext-based, request-response and cl
 | http.request.full_uri contains "admin | Full *URI: Complete URI information. |
 | http.connection == "Keep-Alive" | Connection status. |
 
+###  Decrypting HTTPS Traffic
+When investigating web traffic, analysts often run across encrypted traffic. This is caused by using the Hypertext Transfer Protocol Secure (HTTPS) protocol for enhanced security against spoofing, sniffing and intercepting attacks. HTTPS uses TLS protocol to encrypt communications, so it is impossible to decrypt the traffic and view the transferred data without having the encryption/decryption key pairs. As this protocol provides a good level of security for transmitting sensitive data, attackers and malicious websites also use HTTPS. Therefore, a security analyst should know how to use key files to decrypt encrypted traffic and investigate the traffic activity.
+
+| Filter | Description |
+|---|---|
+| http.request | Listing all requests |
+| tls | listing all tls traffic |
+| tls.handshake.type == 1 | TLS Client Request |
+| tls.handshake.type == 2 | TLS Server Request |
+| tls.handshake.extensions_server_name == “accounts.google.com” | tls domain search |
+
 # Conclusion 
 
 In this module, Traffic Monitoring and investigating with wireshark pratical are leared. Do more Practice and Expert it!. <br>
