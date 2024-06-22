@@ -56,3 +56,9 @@ MISP is effectively useful for the following use cases:
 
 ###  [OpenCTI](https://github.com/OpenCTI-Platform/opencti)
 OpenCTI is another open-sourced platform designed to provide organisations with the means to manage CTI through the storage, analysis, visualisation and presentation of threat campaigns, malware and IOCs. The platform's main objective is to create a comprehensive tool that allows users to capitalise on technical and non-technical information while developing relationships between each piece of information and its primary source.
+
+## Conclusion 
+
+In this module, Threat Intelligence basic tools and concepts are learned. Do more Practice and Expert it!. <br>
+**6/22/2024** <br>
+Contributed By - Jord@n
