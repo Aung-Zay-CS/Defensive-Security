@@ -39,3 +39,20 @@ IT and Cybersecurity companies collect massive amounts of information that could
 - Vulnerability Research & Discovery: Working with service and software vendors to develop repeatable means of identifying and reporting security vulnerabilities.
 - Communities: Maintains the image of the team and the open-source solutions.
 - Global Outreach: Disseminates intelligence to customers and the security community through publications.
+
+###  [MISP](https://www.misp-project.org/)
+
+MISP (Malware Information Sharing Platform) is an open-source threat information platform that facilitates the collection, storage and distribution of threat intelligence and Indicators of Compromise (IOCs) related to malware, cyber attacks, financial fraud or any intelligence within a community of trusted members. 
+
+Information sharing follows a distributed model, with supported closed, semi-private, and open communities (public). Additionally, the threat information can be distributed and consumed by Network Intrusion Detection Systems (NIDS), log analysis tools and Security Information and Event Management Systems (SIEM).
+
+MISP is effectively useful for the following use cases:
+- Malware Reverse Engineering: Sharing of malware indicators to understand how different malware families function.
+- Security Investigations: Searching, validating and using indicators in investigating security breaches.
+- Intelligence Analysis: Gathering information about adversary groups and their capabilities.
+- Law Enforcement: Using Indicators to support forensic investigations.
+- Risk Analysis: Researching new threats, their likelihood and occurrences.
+- Fraud Analysis: Sharing of financial indicators to detect financial fraud.
+
+###  [OpenCTI](https://github.com/OpenCTI-Platform/opencti)
+OpenCTI is another open-sourced platform designed to provide organisations with the means to manage CTI through the storage, analysis, visualisation and presentation of threat campaigns, malware and IOCs. The platform's main objective is to create a comprehensive tool that allows users to capitalise on technical and non-technical information while developing relationships between each piece of information and its primary source.
