@@ -63,9 +63,93 @@ There are three main detection and prevention techniques used in IDS and IPS sol
 
 
 ##  Snort Usecases
+| Parameter | Description |
+|---|---|
+| -V | provides information about your instance version. |
+| -v | Verbose. Display the TCP/IP output in the console. |
+| -T | testing configuration. |
+| -c | identifying the configuration file. |
+| -d | Display the packet data (payload). |
+| -e | Display the link-layer (TCP/IP/UDP/ICMP) headers. |
+| -X | Display the full packet details in HEX. |
+| -i | This parameter helps to define a specific network interface to listen/sniff. |
+| -l | Logger mode, target log and alert output directory. |
+| -K | ASCII	Log packets in ASCII format. |
+| -r | Reading option, read the dumped logs in Snort. |
+| -n | Specify the number of packets that will process/read. |
+| -N | Disable logging. |
+| -D | Background mode. |
+| -A | Alert modes(console/cmg/Full/fast/none) |
+| -r / --pcap-single= |	Read a single pcap |
+| --pcap-list="" | Read pcaps provided in command |
+| --pcap-show	| Show pcap name on console during processing. |
 
 The following command will show you the instance version.
-- `snort -v`
+- `snort -V`
 
-Here "-T" is used for testing configuration, and "-c" is identifying the configuration file.
+Here "-T" is used for , and "-c" is .
 - `sudo snort -c /etc/snort/snort.conf -T`
+
+to sniff on the interface named "eth0"
+- `sudo snort -v -i eth0`
+
+dumping packet data mode 
+- `sudo snort -d`
+
+Snort instance in full packet dump mode
+- `sudo snort -X`
+
+Start the Snort instance in dump and link-layer header grabbing mode
+- `sudo snort -de`
+
+Snort instance in packet logger mode
+- `sudo snort -dev -l /home/user/Desktop`
+- `sudo snort -dev -K ASCII -l /home/user/Desktop`
+
+Snort instance in packet reader mode 
+- `sudo snort -r snort.log.1638459842 -ntc 10`
+
+Snort instance in packet reader mode with Berkeley Packet Filters
+- `sudo snort -r logname.log -X`
+- `sudo snort -r logname.log icmp`
+- `sudo snort -r logname.log tcp`
+- `sudo snort -r logname.log 'udp and port 53'`
+
+Investigating single PCAP
+- `snort -r icmp-test.pcap`
+- `sudo snort -c /etc/snort/snort.conf -q -r icmp-test.pcap -A console -n 10`
+
+Investigate multiple pcaps
+- `sudo snort -c /etc/snort/snort.conf -q --pcap-list="icmp-test.pcap http2.pcap" -A console -n 10`
+- `sudo snort -c /etc/snort/snort.conf -q --pcap-list="icmp-test.pcap http2.pcap" -A console --pcap-show`
+- ``
+
+###  ﻿Snort in IDS/IPS Mode
+Capabilities of Snort are not limited to sniffing and logging the traffic. IDS/IPS mode helps you manage the traffic according to user-defined rules. (N)IDS/IPS mode depends on the rules and configuration.
+
+Snort ICMP Rule Example:
+- `alert icmp any any <> any any  (msg: "ICMP Packet Found"; sid: 100001; rev:1;)`
+
+This rule is located in "/etc/snort/rules/local.rules".
+
+Snort instance and disable logging
+- `sudo snort -c /etc/snort/snort.conf -N`
+
+Snort instance in background mode 
+- `sudo snort -c /etc/snort/snort.conf -D`
+
+Snort instance in console alert mode (console)
+- `sudo snort -c /etc/snort/snort.conf -A console`
+- `sudo snort -c /etc/snort/rules/local.rules -A console`
+
+Snort instance in cmg alert mode
+- `sudo snort -c /etc/snort/snort.conf -A cmg`
+
+Snort instance in fast alert mode
+- `sudo snort -c /etc/snort/snort.conf -A fast`
+
+Snort instance in full alert mode
+- `sudo snort -c /etc/snort/snort.conf -A full`
+
+Snort instance in none alert mode
+- `sudo snort -c /etc/snort/snort.conf -A none`
