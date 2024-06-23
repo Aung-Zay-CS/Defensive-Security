@@ -154,6 +154,41 @@ Snort instance in full alert mode
 Snort instance in none alert mode
 - `sudo snort -c /etc/snort/snort.conf -A none`
 
+##  Snort Detection Rules
+
+Detecting TCP port 80 for both inbound and outbound HTTP traffic
+```
+alert tcp any 80 <> any any (msg:"TCP port 80 inbound traffic detected";sid:1000000000001; rev :1)
+alert tcp any any <> any 80 (msg:"TCP port 80 outbound traffic detected";sid:1000000000002; rev :1)
+alert tcp any 80,443 -> any any (msg: "HTTPX Packet Found"; sid:1000002; rev:1;)
+```
+
+Detecting TCP port 21 for both inbound and outbound FTP traffic
+```
+alert tcp any 21 <> any any (msg:"Outbound ftp traffic detected";sid:1000000000003; rev :1)
+alert tcp any any <> any 21 (msg:"Inbound ftp traffic detected";sid:1000000000004; rev :1)
+alert tcp any any <> any 21 (msg:"Failed ftp login attempt";content:"530";sid:1000000000005; rev :1)
+alert tcp any any <> any 21 (msg:"Successful ftp login";content:"230";sid:1000000000006; rev :1)
+alert tcp any any <> any 21 (msg:"Invalid Password";content:"331";sid:1000000000007; rev :1)
+alert tcp any any <> any 21 (msg:"Invalid Admin Password";content:"331";content:"Administrator";sid:1000000000008; rev :1)
+```
+
+Detecting PNG file and GIF file in traffic
+- `alert tcp any any -> any any (msg:"PNG File Detected"; content:"|89 50 4E 47 0D 0A 1A 0A|"; depth:8;sid:10000000009)`
+- `alert tcp any any -> any any (msg:"GIF File Detected"; content:"GIF89a"; depth:6;sid:10000000010)`
+
+Detecting Torrent file in traffic
+- `alert tcp any any -> any any (msg:"Torrent File Detected"; content:".torrent"; nocase;sid:10000000011)`
+
+Detecting ICMP packet in traffic
+- `alert icmp any any -> any any (msg: "ICMP Packet Found"; sid:1000001; rev:1;)`
+
+Detecting payload size in traffic
+- `alert tcp any any -> any any (msg: "Packet payload size between 770 and 855 bytes detected"; dsize: 770<>855; sid: 1000001;)`
+
+Detecting and Droping ssh connection in taffic
+- `drop tcp any 22 <> any any (msg:"SSH Connection attempted"; sid:100001; rev:1;)`
+
 ## Conclusion 
 
 In this module, Intrusion Detection/Prevention System investigating with snort pratical are leared. Do more Practice and Expert it!. <br>
