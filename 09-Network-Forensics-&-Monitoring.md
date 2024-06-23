@@ -63,3 +63,9 @@ Capturing proper network traffic requires knowledge and tools. Usually, there is
 - Web Proxies
 - Central Log Servers
 - Logs (IDS/IPS, Application, OS, Device)
+
+## Conclusion 
+
+In this module, Network monitoring and forensics basic tools and concepts are learned. Do more Practice and Expert it!. <br>
+**6/23/2024** <br>
+Contributed By - Jord@n
