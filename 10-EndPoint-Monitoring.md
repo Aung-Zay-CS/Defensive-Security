@@ -95,3 +95,42 @@ PowerShell command: `Download-SysInternalsTools C:\Sysinternals`
 
 To start Sysmon you will want to open a new PowerShell or Command Prompt as an Administrator.
 - Command Used: `Sysmon.exe -accepteula -i ..\Configuration\swift.xml`
+
+
+##  Osquery
+Osquery is an open-source agent created by Facebook in 2014. It converts the operating system into a relational database. It allows us to ask questions from the tables using SQL queries, like returning the list of running processes, a user account created on the host, and the process of communicating with certain suspicious domains. It is widely used by Security Analysts, Incident Responders, Threat Hunters, etc. Osquery can be installed on multiple platforms: Windows, Linux, macOS, and FreeBSD.
+
+| Commands | Description |
+|---|---|
+| .tables | list all the available tables |
+| .tables user | list all the tables with the term |
+| .schema tablen_name | list a table's schema |
+| select | to query select |
+| = | equal |
+| <> | not equal |
+| >, >= | greater than, greater than, or equal to |
+| <, <= | less than or less than or equal to |
+| BETWEEN | between a range |
+| LIKE | pattern wildcard searches |
+| % | wildcard, multiple characters |
+| _ | wildcard, one character |
+
+###  Example Queries
+
+Exploring Users information
+- `select p.pid, p.name, p.path, u.username from processes p JOIN users u on u.uid=p.uid LIMIT 10;`
+- `select uid, username, description from users;`
+- `SELECT * FROM users WHERE username='James';`
+
+Exploring services information
+- `select count(name) from services where status=’RUNNING’;`
+- `select name, status from services;`
+- `select count(name) from services;`
+
+Exploring Installed Programs
+- `SELECT * FROM programs LIMIT 1;`
+- `SELECT name from programs;`
+- `SELECT name, version, install_location, install_date from programs limit 1;`
+- `SELECT count(*) from programs;`
+- `select uid, pid, name, path from processes;`
+- `select name,install_location from programs where name LIKE ‘%wireshark%’;`
