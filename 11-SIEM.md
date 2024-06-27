@@ -92,3 +92,9 @@ It takes the data, normalizes it into field-value pairs, determines the datatype
 
 Splunk Search Head is the place within the Search & Reporting App where users can search the indexed logs as shown below.
 When the user searches for a term or uses a Search language known as Splunk Search Processing Language, the request is sent to the indexer and the relevant events are returned in the form of field-value pairs.
+
+## Conclusion 
+
+In this module, Security Information and Events Management solution and architecture is learned. Do more Practice and Expert it!. <br>
+**6/27/2024** <br>
+Contributed By - Jord@n
