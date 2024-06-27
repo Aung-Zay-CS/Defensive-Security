@@ -134,3 +134,9 @@ Exploring Installed Programs
 - `SELECT count(*) from programs;`
 - `select uid, pid, name, path from processes;`
 - `select name,install_location from programs where name LIKE ‘%wireshark%’;`
+
+## Conclusion 
+
+In this module, Endpoint monitoring solutions are complex to understand and such solutions are integrated with SIEM or 24/7 monitoring. Do more Practice and Expert it!. <br>
+**6/27/2024** <br>
+Contributed By - Jord@n
