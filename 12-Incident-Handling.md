@@ -14,3 +14,8 @@ The Incident Handling process is divided into four different phases.
 4. Post-Incident Activity / Lessons Learnt
 - This phase includes identifying the loopholes in the organization's security posture, which led to an intrusion, and improving so that the attack does not happen next time. The steps involve identifying weaknesses that led to the attack, adding detection rules so that similar breach does not happen again, and most importantly, training the staff if required.
 
+## Conclusion 
+
+In this module, Incident Response and handling process have step by step procedures to related incidents. Do more Practice and Expert it!. <br>
+**6/27/2024** <br>
+Contributed By - Jord@n
