@@ -62,3 +62,9 @@ The security industry has built various exciting tools to help with the DFIR pro
 - Lessons Learned: Finally, a review of the incident is performed, the incident is documented, and steps are taken based on the findings from the incident to make sure that the team is better prepared for the next time an incident occurs.
 
 <p align="center"><img src="https://github.com/Aung-Zay-CS/Defensive-Security/assets/154745254/f77226a0-8248-4055-9bf2-d0611ab77422" width="400px" height="400px"><br>Lifecycle</p>
+
+## Conclusion 
+
+In this module, Incident Response handling process and Digital forensics process are learned. Do more Practice and Expert it!. <br>
+**6/28/2024** <br>
+Contributed By - Jord@n
