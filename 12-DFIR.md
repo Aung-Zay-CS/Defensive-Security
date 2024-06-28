@@ -53,6 +53,9 @@ The security industry has built various exciting tools to help with the DFIR pro
 ***Velociraptor***
 - Velociraptor is an advanced endpoint-monitoring, forensics, and response platform. It is open-source but very powerful.
 
+***Data Acquisition***
+- When performing forensics, we will either encounter a live system or an image taken of the system. For the sake of accuracy, it is recommended practice to image the system or make a copy of the required data and perform forensics on it. This process is called data acquisition. 
+
 ###  Incident Response Process
 - Preparation: Before an incident happens, preparation needs to be done so that everyone is ready in case of an incident. Preparation includes having the required people, processes, and technology to prevent and respond to incidents.
 - Identification: An incident is identified through some indicators in the identification phase. These indicators are then analyzed for False Positives, documented, and communicated to the relevant stakeholders.
@@ -62,6 +65,94 @@ The security industry has built various exciting tools to help with the DFIR pro
 - Lessons Learned: Finally, a review of the incident is performed, the incident is documented, and steps are taken based on the findings from the incident to make sure that the team is better prepared for the next time an incident occurs.
 
 <p align="center"><img src="https://github.com/Aung-Zay-CS/Defensive-Security/assets/154745254/f77226a0-8248-4055-9bf2-d0611ab77422" width="400px" height="400px"><br>Lifecycle</p>
+
+##  Windows Forensics
+
+###  Windows Registry
+The Windows Registry is a collection of databases that contains the system's configuration data. This configuration data can be about the hardware, the software, or the user's information. It also includes data about the recently used files, programs used, or devices connected to the system. As you can understand, this data is beneficial from a forensics standpoint. The Windows registry consists of Keys and Values. When you open the regedit.exe utility to view the registry, the folders you see are Registry Keys. Registry Values are the data stored in these Registry Keys. A Registry Hive is a group of Keys, subkeys, and values stored in a single file on the disk.
+
+###  Structure of the Registry
+
+The registry on any Windows system contains the following five root keys:
+
+- HKEY_CURRENT_USER
+- HKEY_USERS
+- HKEY_LOCAL_MACHINE
+- HKEY_CLASSES_ROOT
+- HKEY_CURRENT_CONFIG
+
+| Folder/predefined | key Description |
+|---|---|
+| HKEY_CURRENT_USER	| Contains the root of the configuration information for the user who is currently logged on. This key is sometimes abbreviated as HKCU. |
+| HKEY_USERS	| Contains all the actively loaded user profiles on the computer. HKEY_USERS is sometimes abbreviated as HKU. |
+| HKEY_LOCAL_MACHINE	| Contains configuration information particular to the computer (for any user). This key is sometimes abbreviated as HKLM. |
+| HKEY_CLASSES_ROOT	| Is a subkey of HKEY_LOCAL_MACHINE\Software. This key is sometimes abbreviated as HKCR. |
+| HKEY_CURRENT_CONFIG	| Contains information about the hardware profile that is used by the local computer at system startup. |
+
+###  System Information and System Accounts
+
+OS Version
+- `SOFTWARE\Microsoft\Windows NT\CurrentVersion`
+
+Services
+- `SYSTEM\CurrentControlSet\Services`
+
+Current control set
+- `SYSTEM\ControlSet001`
+- `HKLM\SYSTEM\CurrentControlSet`
+
+Computer Name
+- `SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName`
+
+Time Zone Information
+- `SYSTEM\CurrentControlSet\Control\TimeZoneInformation`
+
+Network Interfaces and Past Networks
+- `SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces`
+- `SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Unmanaged`
+- `SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Managed`
+
+Autostart Programs (Autoruns)
+- `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Run`
+- `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\RunOnce`
+- `SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`
+- `SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer\Run`
+- `SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
+
+Recent Files
+- `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs`
+
+Office Recent Files
+- `NTUSER.DAT\Software\Microsoft\Office\VERSION`
+- `NTUSER.DAT\Software\Microsoft\Office\15.0\Word`
+
+Open/Save and LastVisited Dialog MRUs
+- `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePIDlMRU`
+- `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedPidlMRU`
+
+Windows Explorer Address/Search Bars
+- `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths`
+- `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery`
+
+UserAssist
+- `NTUSER.DAT\Software\Microsoft\Windows\Currentversion\Explorer\UserAssist\{GUID}\Count`
+
+ShimCache
+- `SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache`
+
+AmCache
+- `C:\Windows\appcompat\Programs\Amcache.hve`
+
+Background Activity Monitor or BAM
+- `SYSTEM\CurrentControlSet\Services\bam\UserSettings\{SID}`
+- `SYSTEM\CurrentControlSet\Services\dam\UserSettings\{SID}`
+
+USB device Volume Name
+- `SOFTWARE\Microsoft\Windows Portable Devices\Devices`
+
+Device identification
+- `SYSTEM\CurrentControlSet\Enum\USBSTOR`
+- `SYSTEM\CurrentControlSet\Enum\USB`
 
 ## Conclusion 
 
