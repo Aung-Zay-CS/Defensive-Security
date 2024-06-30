@@ -66,6 +66,16 @@ The security industry has built various exciting tools to help with the DFIR pro
 
 <p align="center"><img src="https://github.com/Aung-Zay-CS/Defensive-Security/assets/154745254/f77226a0-8248-4055-9bf2-d0611ab77422" width="400px" height="400px"><br>Lifecycle</p>
 
+
+##  [TheHive Project](https://github.com/TheHive-Project/TheHive)
+TheHive Project is a scalable, open-source and freely available Security Incident Response Platform, designed to assist security analysts and practitioners working in SOCs, CSIRTs and CERTs to track, investigate and act upon identified security incidents in a swift and collaborative manner. Security Analysts can collaborate on investigations simultaneously, ensuring real-time information pertaining to new or existing cases, tasks, observables and IOCs are available to all team members.
+
+TheHive Project operates under the guide of three core functions:
+
+- Collaborate: Multiple analysts from one organisation can work together on the same case simultaneously. Through its live stream capabilities, everyone can keep an eye on the cases in real time.
+- Elaborate: Investigations correspond to cases. The details of each case can be broken down into associated tasks, which can be created from scratch or through a template engine. Additionally, analysts can record their progress, attach artifacts of evidence and assign tasks effortlessly.
+- Act: A quick triaging process can be supported by allowing analysts to add observables to their cases, leveraging tags, flagging IOCs and identifying previously seen observables to feed their threat intelligence. 
+
 ##  Windows Forensics
 
 ###  Windows Registry
