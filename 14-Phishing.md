@@ -29,3 +29,18 @@ Below is a checklist of the artifacts an analyst (you) needs to collect from the
 - The hash value of the attachment (hash type MD5 or SHA256, preferably the latter)
 
 Warning: Be careful not to click on any links or attachments in the email accidentally. 
+
+
+##  Phishing Anaylysis Tools
+
+###  Email Header Analysis
+
+- [Google Admin Toolbox](https://toolbox.googleapps.com/apps/messageheader/analyzeheader)
+- [Message Header Analyzer](https://mha.azurewebsites.net/)
+- [Analyze my mail header](https://mailheader.org/)
+- [ipinfo](https://ipinfo.io/)
+- [PhishTool](https://www.phishtool.com/)
+- [Virustotal](https://www.virustotal.com/gui/home/upload)
+- [urlscan.io](https://urlscan.io/)
+- [Talos](https://talosintelligence.com/reputation)
+- [Talos File Reputation](https://talosintelligence.com/talos_file_reputation)
