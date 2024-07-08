@@ -215,3 +215,9 @@ Most log files on Linux systems are stored in the /var/log directory. Here are a
 - `/var/log/wtmp` - an access log that contains information for all users that have logged in and out of the system
 - `/var/log/kern.log` - a log file containing messages from the kernel
 - `/var/log/boot.log` - a log file that contains start-up messages and boot information
+
+## Conclusion 
+
+In this module, Linux system hardening techniques are learned. Do more Practice and Expert it!. <br>
+**7/8/2024** <br>
+Contributed By - Jord@n
