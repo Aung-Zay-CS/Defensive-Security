@@ -1,3 +1,4 @@
+#  Linux System hardening
 Linux systems provide a reliable and robust alternative to closed-source systems, such as MS Windows Server and UNIX.
 Of course, we cannot claim that Linux is always the best choice; however, Linux is the best choice for many scenarios. Before using this option, we must focus on securing our Linux systems, also known as Linux hardening.
 
