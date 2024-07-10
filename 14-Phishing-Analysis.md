@@ -113,3 +113,9 @@ S/MIME (Secure/Multipurpose internet Mail Extensions) is a widely accepted proto
 The 2 main ingredients for S/MIME are:
 - Digital Signatures
 - Encryption
+
+## Conclusion 
+
+In this module, we have learned what is phishing and phishing analysis techniques are learned. Do more Practice and Expert it!. <br>
+**710/2024** <br>
+Contributed By - Jord@n
