@@ -100,3 +100,9 @@ It was developed by International Organization for Standardization (ISO) and the
 - Statement of Applicability (SoA): This document specifies which controls from the standard are applicable and which are not.
 - Internal audit: This involves conducting periodic audits of the ISMS to ensure that it is operating effectively.
 - Management review: Review the performance of ISMS at regular intervals.
+
+## Conclusion 
+
+In this module, Governance, Regulation and Compliance best practices are learned. Do more Practice and Expert it!. <br>
+**7/8/2024** <br>
+Contributed By - Jord@n
