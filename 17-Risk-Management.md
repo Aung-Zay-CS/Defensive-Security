@@ -155,3 +155,8 @@ The response you choose against the risk takes into account the severity of the 
 - Mitigate Risk: A company might invest in countermeasures to reduce risk to an acceptable level; this would be risk mitigation. To protect against computer viruses, a company might install antivirus on all its computers instead of blocking access to the Internet and glueing the USB ports.
 - Accept Risk: Sometimes, the countermeasure cost exceeds the loss incurred if the risk is realised.
 
+## Conclusion 
+
+In this module, Risk management framework and its protocol and techniques are learned. Do more Practice and Expert it!. <br>
+**7/10/2024** <br>
+Contributed By - Jord@n
